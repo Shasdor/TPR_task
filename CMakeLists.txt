@@ -23,6 +23,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         tsp_method.h tsp_method.cpp
+        mainwindow.h mainwindow.cpp mainwindow.ui
+        icons/arrow_down_left_icon.svg icons/close.svg icons/fullscreen_exit_icon.svg icons/fullscreen_icon.svg icons/github.svg icons/logo_2.svg
+        icons/menu2.svg
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET TPR APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

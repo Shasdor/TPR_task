@@ -1,6 +1,10 @@
 #include "mainwindow.h"
+//#include "tsp_method.h"
 
 #include <QApplication>
+#include <iostream>
+#include <string>
+
 
 int main(int argc, char *argv[])
 {
