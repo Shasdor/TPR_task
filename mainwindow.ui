@@ -209,7 +209,7 @@ QToolBox::tab{
 }</string>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="page_1">
                 <property name="geometry">
@@ -387,7 +387,7 @@ QToolBox::tab{
                         <number>0</number>
                        </property>
                        <item alignment="Qt::AlignTop">
-                        <widget class="QPushButton" name="pushButton_8">
+                        <widget class="QPushButton" name="TSP_task_button">
                          <property name="text">
                           <string>1) Задача о
 коммивояжере</string>
@@ -719,7 +719,7 @@ QToolBox::tab{
                </property>
                <property name="text">
                 <string>Дата изменения:
-20.09.2023</string>
+21.09.2023</string>
                </property>
               </widget>
              </item>
@@ -999,6 +999,53 @@ QToolBox::tab{
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <layout class="QVBoxLayout" name="verticalLayout_22">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="TSP_frame">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_23">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <layout class="QGridLayout" name="distan_matrix"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item alignment="Qt::AlignBottom">
@@ -1058,7 +1105,7 @@ QToolBox::tab{
              <item alignment="Qt::AlignBottom">
               <widget class="QLabel" name="label">
                <property name="text">
-                <string>Version: 1.0</string>
+                <string>Version: 1.1</string>
                </property>
               </widget>
              </item>

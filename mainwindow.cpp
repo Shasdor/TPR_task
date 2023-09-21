@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     //setWindowFlags(Qt::FramelessWindowHint);
     //setAttribute(Qt::WA_TranslucentBackground);
+    //generate_base_tasks();
 
     //centralWidget(setGraphicsEffect(shadow));
     setWindowTitle("TPR");
@@ -64,7 +65,18 @@ void MainWindow::on_change_size_button_clicked()
 
 }
 
+void MainWindow::generate_base_tasks(){
+    //this->ui->distan_matrix = new QGridLayout;
+    //this->ui->distan_matrix->addWidget( QTextEdit);
+
+
+}
 
 
 
+void MainWindow::on_TSP_task_button_clicked()
+{
+    this->ui->TSP_frame->show();
+
+}
 

@@ -14,6 +14,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void generate_base_tasks();
+
 
 private slots:
     void on_menu_button_clicked();
@@ -23,6 +25,10 @@ private slots:
     void on_close_window_button_clicked();
 
     void on_change_size_button_clicked();
+
+    void on_TSP_task_button_clicked();
+
+
 
 
 private:

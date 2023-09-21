@@ -2,7 +2,6 @@
 //#include "tsp_method.h"
 
 #include <QApplication>
-#include <iostream>
 #include <string>
 
 
