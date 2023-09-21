@@ -3,7 +3,6 @@
 #include <QtCore>
 #include <iostream>
 #include <QPropertyAnimation>
-using namespace std;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -26,7 +25,6 @@ MainWindow::~MainWindow()
 void MainWindow::on_menu_button_clicked()
 {
     auto width = ui->slide_menu_container->width();
-    std::cout<<width;
     auto newwidth=0;
     if (width==0){
         newwidth=200;
@@ -34,16 +32,12 @@ void MainWindow::on_menu_button_clicked()
     else{
         newwidth=0;
     }
-    cout<<newwidth<<endl;
     QPropertyAnimation *animation= new  QPropertyAnimation(ui->slide_menu_container,"maximumWidth",this);
     animation->setDuration(250);
     animation->setStartValue(width);
     animation->setEndValue(newwidth);
     animation->setEasingCurve(QEasingCurve::InOutQuart);
     animation->start();
-    //this->show();
-
-
 
 }
 

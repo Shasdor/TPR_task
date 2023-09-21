@@ -156,31 +156,6 @@ border: none;
                </property>
               </widget>
              </item>
-             <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-              <widget class="QLabel" name="label_2">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>60</width>
-                 <height>45</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="pixmap">
-                <pixmap>icons/spmi.png</pixmap>
-               </property>
-               <property name="scaledContents">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
             </layout>
            </widget>
           </item>
@@ -237,6 +212,14 @@ QToolBox::tab{
                 <number>0</number>
                </property>
                <widget class="QWidget" name="page_1">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>194</width>
+                  <height>419</height>
+                 </rect>
+                </property>
                 <attribute name="icon">
                  <iconset>
                   <normaloff>icons/down.svg</normaloff>icons/down.svg</iconset>
@@ -329,7 +312,7 @@ QToolBox::tab{
                   <x>0</x>
                   <y>0</y>
                   <width>194</width>
-                  <height>400</height>
+                  <height>419</height>
                  </rect>
                 </property>
                 <attribute name="icon">
@@ -602,7 +585,7 @@ QToolBox::tab{
                   <x>0</x>
                   <y>0</y>
                   <width>194</width>
-                  <height>400</height>
+                  <height>419</height>
                  </rect>
                 </property>
                 <attribute name="icon">
