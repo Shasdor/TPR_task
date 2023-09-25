@@ -11,10 +11,13 @@ tsp_method::tsp_method()
               {7, 3, 4, 0, 4, 2},
               {4, 6, 3, 2, 0, 2},
               {5, 2, 2, 7, 1, 0}};
+    this->answer=this->get_path_cost(1,0);
+    this->get_path(1,0);
 }
 
 tsp_method::tsp_method(int city_n){
     this->city_n=city_n;
+
 
 }
 void tsp_method::new_distan(vector <vector <int>> distan){
@@ -65,7 +68,30 @@ void tsp_method::get_path(int mask, int position){
 
 
 }
-vector <int> tsp_method::show_path(){
-    return best_path;
+QString tsp_method::show_path(){
+    QString path= "Path: 1->";
+
+    for (auto i=this->best_path.begin();i!=this->best_path.end();i++){
+        if (i+1 != best_path.end()){
+            path+=QString::number(*i);
+            path+="->";
+        }
+        else
+            path+=QString::number(*i);
+    }
+
+    return path;
 }
+int tsp_method::get_city(){
+    return this->city_n;
+}
+vector <vector <int>> tsp_method::get_distan(){
+    return this->distan;
+}
+
+QString tsp_method::show_path_cost(){
+    QString cost="Path cost:"+QString::number(this->answer);
+    return cost;
+}
+
 
