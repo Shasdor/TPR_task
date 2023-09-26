@@ -10,6 +10,12 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="minimumSize">
    <size>
     <width>0</width>
@@ -20,13 +26,15 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">/*{
-border: none;
+   <string notr="true">QLineEdit{
+background-color: rgb(255,255,255);
+selection-background-color:rgb(60,60,60)
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">/*background-color: rgb(150,150,150);</string>
+    <string notr="true">background-color: rgb(100,100,100);
+border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <property name="spacing">
@@ -57,15 +65,16 @@ border: none;
       </property>
       <property name="maximumSize">
        <size>
-        <width>200</width>
+        <width>0</width>
         <height>16777215</height>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">/*background-color: rgb(255,255,255);</string>
+       <string notr="true">background-color: rgb(70,70,70);
+color: rgb(255,255,255);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
@@ -95,7 +104,7 @@ border: none;
           </size>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
@@ -119,7 +128,7 @@ border: none;
           <item alignment="Qt::AlignTop">
            <widget class="QFrame" name="frame_8">
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::NoFrame</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
@@ -152,7 +161,7 @@ border: none;
                 </font>
                </property>
                <property name="text">
-                <string>TPR</string>
+                <string>DSS</string>
                </property>
               </widget>
              </item>
@@ -174,7 +183,7 @@ border: none;
              </font>
             </property>
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::NoFrame</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
@@ -197,28 +206,43 @@ border: none;
              </property>
              <item>
               <widget class="QToolBox" name="toolBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="styleSheet">
-                <string notr="true">/*QToolBox{
-	background-color: rgb(150,150,150);
+                <string notr="true">QToolBox{
+	background-color: rgb(40,40,40);
 	text allign:left;
 }
 QToolBox::tab{
 	border-radius: 5px;
-	background-color: rgb(150,150,150);
+	background-color: rgb(40,40,40);
 	text-align: left;	
-}</string>
+}
+*{
+color: white;
+font-weight:bold;
+font-size:16px
+}
+</string>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="page_1">
                 <property name="geometry">
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>194</width>
-                  <height>419</height>
+                  <width>196</width>
+                  <height>409</height>
                  </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
                 </property>
                 <attribute name="icon">
                  <iconset>
@@ -245,6 +269,9 @@ QToolBox::tab{
                  </property>
                  <item>
                   <widget class="QFrame" name="frame_12">
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -292,7 +319,7 @@ QToolBox::tab{
                         <number>0</number>
                        </property>
                        <item alignment="Qt::AlignTop">
-                        <widget class="QPushButton" name="pushButton_5">
+                        <widget class="QPushButton" name="main_menu_button">
                          <property name="text">
                           <string>Главная</string>
                          </property>
@@ -311,8 +338,8 @@ QToolBox::tab{
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>194</width>
-                  <height>419</height>
+                  <width>196</width>
+                  <height>409</height>
                  </rect>
                 </property>
                 <attribute name="icon">
@@ -584,8 +611,8 @@ QToolBox::tab{
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>194</width>
-                  <height>419</height>
+                  <width>196</width>
+                  <height>409</height>
                  </rect>
                 </property>
                 <attribute name="icon">
@@ -689,7 +716,7 @@ QToolBox::tab{
              </size>
             </property>
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::NoFrame</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
@@ -719,7 +746,7 @@ QToolBox::tab{
                </property>
                <property name="text">
                 <string>Дата изменения:
-22.09.2023</string>
+26.09.2023</string>
                </property>
               </widget>
              </item>
@@ -771,26 +798,26 @@ QToolBox::tab{
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">/*background-color: rgb(9,5,13);</string>
+          <string notr="true">background-color: rgb(70,70,70);</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <property name="spacing">
-           <number>0</number>
+           <number>3</number>
           </property>
           <property name="leftMargin">
-           <number>0</number>
+           <number>3</number>
           </property>
           <property name="topMargin">
            <number>0</number>
           </property>
           <property name="rightMargin">
-           <number>0</number>
+           <number>3</number>
           </property>
           <property name="bottomMargin">
            <number>0</number>
@@ -804,7 +831,7 @@ QToolBox::tab{
              </sizepolicy>
             </property>
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::NoFrame</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
@@ -833,6 +860,9 @@ QToolBox::tab{
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
+               <property name="styleSheet">
+                <string notr="true">border-radius: 7px;</string>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -842,8 +872,8 @@ QToolBox::tab{
                </property>
                <property name="iconSize">
                 <size>
-                 <width>32</width>
-                 <height>45</height>
+                 <width>35</width>
+                 <height>35</height>
                 </size>
                </property>
               </widget>
@@ -860,7 +890,7 @@ QToolBox::tab{
              </sizepolicy>
             </property>
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::NoFrame</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
@@ -895,7 +925,7 @@ QToolBox::tab{
                <property name="maximumSize">
                 <size>
                  <width>200</width>
-                 <height>50</height>
+                 <height>40</height>
                 </size>
                </property>
                <property name="text">
@@ -921,7 +951,7 @@ QToolBox::tab{
              </sizepolicy>
             </property>
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::NoFrame</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
@@ -931,14 +961,20 @@ QToolBox::tab{
           <item alignment="Qt::AlignRight|Qt::AlignTop">
            <widget class="QFrame" name="frame_2">
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::NoFrame</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
+            <property name="lineWidth">
+             <number>1</number>
+            </property>
+            <property name="midLineWidth">
+             <number>0</number>
+            </property>
             <layout class="QHBoxLayout" name="horizontalLayout_5">
              <property name="spacing">
-              <number>0</number>
+              <number>3</number>
              </property>
              <property name="leftMargin">
               <number>0</number>
@@ -954,6 +990,15 @@ QToolBox::tab{
              </property>
              <item alignment="Qt::AlignTop">
               <widget class="QPushButton" name="minimize_window_button">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(40,40,40);
+</string>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -961,27 +1006,68 @@ QToolBox::tab{
                 <iconset>
                  <normaloff>icons/arrow_down_left_icon.svg</normaloff>icons/arrow_down_left_icon.svg</iconset>
                </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="default">
+                <bool>false</bool>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
               </widget>
              </item>
-             <item alignment="Qt::AlignTop">
+             <item>
               <widget class="QPushButton" name="change_size_button">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(40,40,40);
+</string>
+               </property>
                <property name="text">
                 <string/>
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>icons/fullscreen_icon.svg</normaloff>icons/fullscreen_icon.svg</iconset>
+                 <normaloff>icons/maximize.svg</normaloff>icons/maximize.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
              <item alignment="Qt::AlignTop">
               <widget class="QPushButton" name="close_window_button">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(40,40,40);
+</string>
+               </property>
                <property name="text">
                 <string/>
                </property>
                <property name="icon">
                 <iconset>
                  <normaloff>icons/close.svg</normaloff>icons/close.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -998,6 +1084,12 @@ QToolBox::tab{
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">*{
+background-color: rgb(100, 100, 100);
+color: rgb(255,255,255);
+}</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_22">
           <property name="spacing">
@@ -1016,12 +1108,18 @@ QToolBox::tab{
            <number>0</number>
           </property>
           <item>
-           <widget class="QFrame" name="TSP_frame">
+           <widget class="QFrame" name="Main_Window_frame">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -1029,37 +1127,128 @@ QToolBox::tab{
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout">
+            <layout class="QVBoxLayout" name="verticalLayout_33">
              <property name="spacing">
-              <number>6</number>
+              <number>3</number>
              </property>
              <property name="leftMargin">
-              <number>6</number>
+              <number>3</number>
              </property>
              <property name="topMargin">
-              <number>6</number>
+              <number>3</number>
              </property>
              <property name="rightMargin">
-              <number>6</number>
+              <number>3</number>
              </property>
              <property name="bottomMargin">
-              <number>6</number>
+              <number>3</number>
              </property>
-             <item alignment="Qt::AlignLeft">
-              <widget class="QFrame" name="frame_27">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
+             <item>
+              <widget class="QFrame" name="frame_35">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_31">
+               <layout class="QVBoxLayout" name="verticalLayout_34">
+                <property name="spacing">
+                 <number>3</number>
+                </property>
+                <property name="leftMargin">
+                 <number>3</number>
+                </property>
+                <property name="topMargin">
+                 <number>3</number>
+                </property>
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>3</number>
+                </property>
+                <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                 <widget class="QFrame" name="frame_36">
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_35">
+                   <item>
+                    <widget class="QLabel" name="label_11">
+                     <property name="font">
+                      <font>
+                       <pointsize>24</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Decision support systems</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_34">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_38">
+                <item>
+                 <widget class="QFrame" name="frame_39">
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <widget class="QLabel" name="label_13">
+                   <property name="geometry">
+                    <rect>
+                     <x>170</x>
+                     <y>20</y>
+                     <width>49</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                  </widget>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="frame_38">
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_33">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_37">
                 <property name="spacing">
                  <number>3</number>
                 </property>
@@ -1076,9 +1265,100 @@ QToolBox::tab{
                  <number>3</number>
                 </property>
                 <item>
-                 <layout class="QGridLayout" name="distan_matrix" columnstretch="0">
+                 <widget class="QFrame" name="frame_37">
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_36">
+                   <item>
+                    <widget class="QLabel" name="label_12">
+                     <property name="font">
+                      <font>
+                       <pointsize>24</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Decision support systems</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="TSP_frame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0">
+             <property name="spacing">
+              <number>3</number>
+             </property>
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <item>
+              <widget class="QFrame" name="frame_27">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_31">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QGridLayout" name="distan_matrix" rowstretch="0" columnstretch="0" rowminimumheight="0" columnminimumwidth="0">
                   <property name="sizeConstraint">
-                   <enum>QLayout::SetDefaultConstraint</enum>
+                   <enum>QLayout::SetMaximumSize</enum>
                   </property>
                   <property name="leftMargin">
                    <number>3</number>
@@ -1100,16 +1380,16 @@ QToolBox::tab{
                </layout>
               </widget>
              </item>
-             <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+             <item>
               <widget class="QFrame" name="frame_7">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::NoFrame</enum>
                </property>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
@@ -1119,16 +1399,16 @@ QToolBox::tab{
                  <number>3</number>
                 </property>
                 <property name="leftMargin">
-                 <number>3</number>
+                 <number>0</number>
                 </property>
                 <property name="topMargin">
-                 <number>3</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>3</number>
+                 <number>0</number>
                 </property>
                 <property name="bottomMargin">
-                 <number>3</number>
+                 <number>0</number>
                 </property>
                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
                  <widget class="QFrame" name="frame_24">
@@ -1139,7 +1419,7 @@ QToolBox::tab{
                    </sizepolicy>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::NoFrame</enum>
                   </property>
                   <property name="frameShadow">
                    <enum>QFrame::Raised</enum>
@@ -1170,7 +1450,7 @@ QToolBox::tab{
                      </property>
                      <property name="font">
                       <font>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                       </font>
                      </property>
                      <property name="text">
@@ -1189,7 +1469,16 @@ QToolBox::tab{
                      <property name="font">
                       <font>
                        <pointsize>12</pointsize>
+                       <bold>true</bold>
                       </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">*{
+background-color: rgb(170,170,170);
+color:black;
+font-weight: bold;
+
+}</string>
                      </property>
                      <property name="minimum">
                       <number>3</number>
@@ -1205,43 +1494,16 @@ QToolBox::tab{
                   </layout>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QFrame" name="frame_31">
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_32">
-                   <item>
-                    <widget class="QLabel" name="label_10">
-                     <property name="font">
-                      <font>
-                       <pointsize>10</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>Changing
- variables is only
- available when
- city's quantity = 6</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QFrame" name="frame_23">
+                 <widget class="QFrame" name="k1_frame">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::NoFrame</enum>
                   </property>
                   <property name="frameShadow">
                    <enum>QFrame::Raised</enum>
@@ -1283,20 +1545,21 @@ QToolBox::tab{
                    <item>
                     <widget class="QLineEdit" name="k1_tsp">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>70</width>
+                       <width>50</width>
                        <height>16777215</height>
                       </size>
                      </property>
                      <property name="font">
                       <font>
                        <pointsize>12</pointsize>
+                       <bold>true</bold>
                       </font>
                      </property>
                      <property name="tabletTracking">
@@ -1304,6 +1567,14 @@ QToolBox::tab{
                      </property>
                      <property name="autoFillBackground">
                       <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">*{
+background-color: rgb(170,170,170);
+border-radius: 5px;
+color: black;
+font-weight:bold;
+}</string>
                      </property>
                      <property name="inputMask">
                       <string/>
@@ -1326,9 +1597,9 @@ QToolBox::tab{
                  </widget>
                 </item>
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QFrame" name="frame_26">
+                 <widget class="QFrame" name="k2_frame">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
@@ -1345,7 +1616,7 @@ QToolBox::tab{
                    </font>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::NoFrame</enum>
                   </property>
                   <property name="frameShadow">
                    <enum>QFrame::Raised</enum>
@@ -1387,24 +1658,34 @@ QToolBox::tab{
                    <item>
                     <widget class="QLineEdit" name="k2_tsp">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>70</width>
+                       <width>50</width>
                        <height>16777215</height>
                       </size>
                      </property>
                      <property name="font">
                       <font>
                        <pointsize>12</pointsize>
+                       <bold>true</bold>
                       </font>
                      </property>
                      <property name="autoFillBackground">
                       <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">*{
+background-color: rgb(170,170,170);
+border-radius: 5px;
+color: black;
+font-weight:bold;
+
+}</string>
                      </property>
                      <property name="inputMask">
                       <string/>
@@ -1427,9 +1708,9 @@ QToolBox::tab{
                  </widget>
                 </item>
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QFrame" name="frame_25">
+                 <widget class="QFrame" name="k3_frame">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
@@ -1440,7 +1721,7 @@ QToolBox::tab{
                    </font>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::NoFrame</enum>
                   </property>
                   <property name="frameShadow">
                    <enum>QFrame::Raised</enum>
@@ -1482,24 +1763,33 @@ QToolBox::tab{
                    <item alignment="Qt::AlignHCenter|Qt::AlignTop">
                     <widget class="QLineEdit" name="k3_tsp">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>70</width>
+                       <width>50</width>
                        <height>16777215</height>
                       </size>
                      </property>
                      <property name="font">
                       <font>
                        <pointsize>12</pointsize>
+                       <bold>true</bold>
                       </font>
                      </property>
                      <property name="autoFillBackground">
                       <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">*{
+background-color: rgb(170,170,170);
+border-radius: 5px;
+color: black;
+font-weight:bold;
+}</string>
                      </property>
                      <property name="text">
                       <string>7</string>
@@ -1527,7 +1817,7 @@ QToolBox::tab{
                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
                  <widget class="QFrame" name="frame_29">
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::NoFrame</enum>
                   </property>
                   <property name="frameShadow">
                    <enum>QFrame::Raised</enum>
@@ -1545,16 +1835,52 @@ QToolBox::tab{
                    <property name="bottomMargin">
                     <number>6</number>
                    </property>
-                   <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                   <item alignment="Qt::AlignHCenter">
                     <widget class="QPushButton" name="TSP_calculate_button">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(40,40,40);
+font-size:16px
+</string>
+                     </property>
                      <property name="text">
                       <string>Calculate</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="TSP_deafult_button">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(40,40,40);
+font-size: 16px
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Reset to
+ default</string>
                      </property>
                     </widget>
                    </item>
@@ -1567,19 +1893,13 @@ QToolBox::tab{
              <item>
               <widget class="QFrame" name="frame_28">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
-               <property name="minimumSize">
-                <size>
-                 <width>300</width>
-                 <height>0</height>
-                </size>
-               </property>
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::NoFrame</enum>
                </property>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
@@ -1606,7 +1926,7 @@ QToolBox::tab{
                    </sizepolicy>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::NoFrame</enum>
                   </property>
                   <property name="frameShadow">
                    <enum>QFrame::Raised</enum>
@@ -1632,6 +1952,11 @@ QToolBox::tab{
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
                      <property name="text">
                       <string>Path</string>
                      </property>
@@ -1644,6 +1969,36 @@ QToolBox::tab{
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>300</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>14</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>true</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">*{
+background-color: rgb(170,170,170);
+border-radius: 10px;
+color: black;
+font-weight: bold;
+selection-background-color:rgb(60,60,60)
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="lineWidth">
+                      <number>1</number>
                      </property>
                     </widget>
                    </item>
@@ -1666,6 +2021,9 @@ QToolBox::tab{
            <width>16777215</width>
            <height>16777215</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(80,80,80);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -1692,7 +2050,7 @@ QToolBox::tab{
           <item>
            <widget class="QFrame" name="frame_4">
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::NoFrame</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
@@ -1716,7 +2074,7 @@ QToolBox::tab{
              <item alignment="Qt::AlignBottom">
               <widget class="QLabel" name="label">
                <property name="text">
-                <string>Version: 1.2</string>
+                <string>Version: 1.3</string>
                </property>
               </widget>
              </item>
@@ -1732,7 +2090,7 @@ QToolBox::tab{
              </sizepolicy>
             </property>
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::NoFrame</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
@@ -1800,6 +2158,9 @@ QToolBox::tab{
                </property>
                <property name="autoFillBackground">
                 <bool>false</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border: none;</string>
                </property>
                <property name="text">
                 <string>Created by

@@ -30,13 +30,21 @@ private slots:
 
     void on_TSP_task_button_clicked();
 
-
-
-
-
     void on_tsp_city_editingFinished();
 
     void on_TSP_calculate_button_clicked();
+
+    void on_github_site_clicked();
+
+    void on_TSP_deafult_button_clicked();
+
+    void do_TSP();
+//    void clear_matrix();
+    void resize_TSP_matrix(int);
+    QLineEdit* create_cell_for_TSP(int,int);
+//    void moveWindow(QMouseEvent*);
+//   void mousePressEvent(QMouseEvent*);
+
 
 private:
     Ui::MainWindow *ui;
